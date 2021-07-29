@@ -1,0 +1,255 @@
+/* Global*/
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-rusty: #c75000;
+  --color-light-rusty: #544c3e;
+  --color-dark-rusty: #403828;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  --font-nano: 12px;
+  --font-pico: 10px;
+  --font-femto: 8px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --avatar-szie: 35px;
+  --size-border-radius: 4px;
+}
+
+* {
+  outline: 0;
+  box-sizing: border-box;
+}
+
+#gnb .tr_pcba {
+  background-color:var(--color-pink);
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-nano);
+  cursor: default;
+  border: none;
+  background-color: var(--color-light-white);
+  width: 1500px;
+  /* width: 1200px; */
+  margin: 0;
+  -ms-overflow-style: none;
+  scroll
+}
+
+::-webkit-scrollbar { display: none; }
+
+div.container {
+  margin: 0px;
+  width: 100%;
+}
+
+.pcba_int.pcba_all_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pcba_srh.pcba_all_btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 1500px;
+}
+
+.pcba_btn {
+  background-color: var(--color-dark-rusty);
+  border-color: var(--color-dark-rusty);
+  color: var(--color-white);
+  margin: 0.1em 0.2em;
+  user-select: none;
+  border-radius: 5px;
+  font-size: var(--font-nano);
+  width: 100px;
+  height: 24px;
+}
+
+div.pcba_head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  width: 1500px;
+}
+
+.pcba_btn.pcba_insert {
+  width: 110px;
+}
+
+.pcba_file {
+  border: 2px ridge;
+  border-color: var(--color-dark-rusty);
+  border-radius: 5px;
+  font-size: var(--font-nano);
+  width: 200px;
+}
+
+.pcba_btn:hover {
+  cursor: pointer;
+  color: var(--color-pink);
+}
+
+.pcba_head {
+  display: flex;
+  margin-left: 10px;
+}
+
+.pcba_input {
+  width: 150px;
+}
+
+
+table.pcba {
+  width: 1500px;
+}
+
+.th_pcba,
+.tr_pcba {
+  width: 100%;
+}
+
+.h_pcba {
+  background-color:var(--color-light-rusty);
+  color: var(--color-light-white);
+  text-align: center;
+}
+
+.d_pcba {  
+  text-align: center;
+}
+
+.srh_space {
+  height: 10px;
+}
+
+.tr_validity_N {
+  background-color:var(--color-rusty);
+}
+
+.tr_status_used {
+  background-color:var(--color-light-grey);  
+}
+
+.d_pcba.d_pcba_sn:hover {
+  cursor: pointer;
+  background-color:var(--color-pink);
+}
+
+.h_pcba.h_pcba_b.h_pcba_sn:hover,
+.h_pcba.h_pcba_b.h_adc:hover,
+.h_pcba.h_pcba_b.h_issue:hover {
+  cursor: pointer;
+  background-color: #7D7460;
+}
+
+.pcba_h {
+  width: 120px;
+  margin-left: 30px;
+  font-weight: var(--weight-semi-bold);  
+}
+
+.pcba_l {
+  width: 180px;
+}
+
+.pcba_l.pcba_sn,
+.pcba_tradDate,
+.pcba_l.pcba_tradId,
+.pcba_version,
+.pcba_type,
+.pcba_l.pcba_scsolsn,
+.pcba_l.pcba_status,
+.pcba_l.pcba_img_radio,
+.pcba_l.pcba_img_adc {
+  background-color:var(--color-dark-white);
+}
+
+.modal-content {
+  width: 650px;
+}
+
+.pcba_l.pcba_img_radio,
+.pcba_l.pcba_img_adc {
+  width: 430px;
+}
+
+.h_pcba.h_pcba_b {  
+  border: 1px solid;
+}
+
+img {
+  max-width: 555px;
+  margin-left: 30px;
+  margin-right:5px;
+}
+
+.modal_list_img_align {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 35px;
+}
+
+.pcba_mdy_image_int,
+.pcba_mdy_image_del {
+  font-size: var(--font-femto );  
+}
+
+.pcba_l.pcba_img_radio_file,
+.pcba_l.pcba_img_adc_file {
+  width: 260px;
+}
+
+table>thead.th_pcba>tr>th.h_pcba {
+  position: sticky;
+  top: 0px;
+}
+
+div.pcba_down {
+  width: 1510px; 
+  /* height: 800px;
+  overflow: auto; */
+  /* border:2px solid red; */
+}
+
+select.pcba_status,
+select.pcba_validity {
+  height: 24px;
+}
+
+/* 담당자 */
+.user_h {
+  width: 120px;
+  margin-left: 30px;
+  font-weight: var(--weight-semi-bold); 
+}
+.user_l {
+  width: 74px;
+}
+select.erp_user {
+  height: 24px;
+}

@@ -1,0 +1,295 @@
+/* Global*/
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-rusty: #c75000;
+  --color-light-rusty: #5a4f3d;
+  --color-dark-rusty: #403828;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  --font-nano: 12px;
+  --font-pico: 10px;
+  --font-femto: 8px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --avatar-szie: 35px;
+  --size-border-radius: 4px;
+}
+
+* {
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-nano);
+  cursor: default;
+  border: none;
+  background-color: var(--color-light-white);
+  width: 1500px;
+  margin: 0;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar { display: none; }
+
+div.container {
+  margin: 0px;
+  width: 100%;
+}
+
+.modal-content {
+  width: 650px;
+}
+
+.modal-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal_list_sub {
+  display: flex;
+  flex-direction: colum;
+}
+
+.modal_list_sub_gap {
+  width: 10px;
+}
+
+.sensor_l {
+  width: 180px;
+}
+
+.sensor_l.sensor_sn,
+.sensor_l.sensor_tradDate,
+.sensor_l.sensor_tradId,
+.sensor_l.sensor_scsolsn,
+.sensor_l.sensor_status {
+  background-color:var(--color-dark-white);
+}
+
+.sensor_int.sensor_all_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sensor_srh.sensor_all_btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 1500px;
+}
+
+.sensor_btn {
+  background-color: var(--color-dark-rusty);
+  border-color: var(--color-dark-rusty);
+  color: var(--color-white);
+  margin: 0.1em 0.2em;
+  user-select: none;
+  border-radius: 5px;
+  font-size: var(--font-nano);
+  width: 100px;
+  height: 24px;
+}
+
+.sensor_file {
+  border: 2px ridge;
+  border-color: var(--color-dark-rusty);
+  border-radius: 5px;
+  font-size: var(--font-nano);
+  width: 200px;
+}
+
+.sensor_btn:hover {
+  cursor: pointer;
+  color: var(--color-pink);
+}
+
+.h_sensor.h_sensor_b.h_sensor_sn:hover {
+  cursor: pointer;
+  background-color: #7D7460;
+}
+
+.sensor_head {
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+}
+
+.sensor_input {
+  width: 150px;
+}
+
+div.sensor_down {
+  width: 1500px; 
+  overflow: auto;
+  /* border:2px solid red; */
+}
+
+table.sensor,
+.th_sensor,
+.tr_sensor {
+  width: 1500px;
+}
+
+th.h_sensor,
+th.mdy_h_sensor {
+  background-color:var(--color-light-rusty);
+  color: var(--color-light-white);
+  text-align: center;
+}
+
+.d_sensor {  
+  text-align: center;
+}
+
+.srh_space {
+  height: 10px;
+}
+
+.tr_validity_N {
+  background-color:var(--color-rusty);
+}
+
+.tr_status_used {
+  background-color:var(--color-light-grey);  
+}
+
+.d_sensor.d_sensor_sn:hover {
+  cursor: pointer;
+  background-color:var(--color-pink);
+}
+
+.sensor_h {
+  width: 100px;
+}
+
+.sensor_r {
+  margin-left: 25px;
+}
+
+td.mdy_b_sensor {
+  width: 53px;
+  text-align: right;
+}
+
+span {
+  font-weight: var(--weight-bold);
+}
+
+td.mdy_b_sensor.b_no {
+  width: 26px;
+  text-align: center;
+}
+
+.mdy_b_sensor.b_no {
+  text-align: center;
+}
+
+.b_hz_mix_avg,
+.b_hz_avg {
+  background-color:var(--color-dark-white);
+}
+
+div.modal-body {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.h_sensor.h_sensor_b {  
+  border: 1px solid;
+}
+
+.sensor_img {
+  width: 180px;
+}
+
+.modal_list_sub {
+  
+  margin: 10px 0px 10px 3px;
+}
+
+.sensor_img.sensor_image_1,
+.sensor_img.sensor_image_2,
+.sensor_img.sensor_image_3 {
+  background-color:var(--color-dark-white);
+  margin-top: 5px;
+}
+
+img {
+  max-width: 580px;
+}
+
+.modal_list_img_align {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.modal_list_img {
+  margin-left: 18px;
+}
+
+.sensor_mdy_image_int,
+.sensor_mdy_image_del {
+  font-size: var(--font-femto );  
+}
+
+table>thead.th_sensor>tr>th.h_sensor {
+  position: sticky;
+  top: 0px;
+}
+
+nav.sensor_up {
+  width: 1500px;
+}
+
+/* Hide Arrows From Input Number
+   Chrome, Safari, Edge, Opera    */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select.sensor_status,
+select.sensor_validity {
+  height: 24px;
+}
+
+/* 담당자 */
+.user_h {
+  width: 100px;
+}
+.user_l {
+  width: 180px;
+}
+select.erp_user {
+  height: 24px;
+}

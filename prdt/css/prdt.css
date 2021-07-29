@@ -1,0 +1,151 @@
+/* Global*/
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-rusty: #c75000;
+  --color-light-rusty: #544c3e;
+  --color-dark-rusty: #403828;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  --font-nano: 12px;
+  --font-pico: 10px;
+  --font-femto: 8px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --avatar-szie: 35px;
+  --size-border-radius: 4px;
+}
+
+* {
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-micro);
+  cursor: default;
+  border: none;
+  background-color: var(--color-light-white);
+  width: 1500px;  
+}
+
+div.container {
+  margin: 0px;
+  width: 1500px;
+}
+
+div.prdt_down,
+table.prdt,
+tbody.tb_prdt,
+tr.tr_prdt {
+  width: 1500px;
+}
+
+.prdt_all_btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 1500px;
+}
+
+.prdt_btn {
+  background-color: var(--color-dark-rusty);
+  border-color: var(--color-dark-rusty);
+  color: var(--color-white);
+  margin: 0.1em 0.2em;
+  user-select: none;
+  border-radius: 5px;
+  font-size: var(--font-nano);
+  width: 100px;
+}
+
+.prdt_btn:hover {
+  cursor: pointer;
+  color: var(--color-pink);
+}
+
+.input {
+  width: 130px;
+}
+
+.ui.pointing.label.pcba,
+.ui.selection.dropdown.pcba {
+  width: 130px;
+}
+
+.ui.pointing.label.sensor,
+.ui.selection.dropdown.sensor {
+  width: 140px;
+}
+
+div.prdt_head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  width: 1500px;
+  
+}
+
+.prdt_input {
+  width: 150px;
+}
+
+.h_prdt {
+  background-color:var(--color-light-rusty);
+  color: var(--color-light-white);
+  text-align: center;
+}
+
+.d_prdt {  
+  text-align: center;
+}
+
+.d_prdt.d_scsol_sn:hover {
+  background-color : var(--color-pink);
+  cursor: pointer;
+}
+
+img {
+  max-width: 580px;
+}
+
+.d_prdt.d_scsol_sn {
+  width: 200px
+}
+
+.d_prdt.d_prdt_sn {
+  width: 160px
+}
+
+div.label_sn {
+  display: flex;
+  justify-content: space-between;
+}
+
+select.prdt_input.prdt_status,
+select.prdt_input.prdt_product,
+select.prdt_input.prdt_finalState {
+  height: 24px;
+}
