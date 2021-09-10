@@ -68,7 +68,7 @@ $row  = mysqli_fetch_assoc($result);
 $totalCnt = $row['totalCnt'];
 
 $sql  = "SELECT * FROM trad_part_pcba WHERE flag != 4 ";
-$sql .= "ORDER BY id ";
+$sql .= "ORDER BY pcba_sn ";
 $sql .= "LIMIT $offset, $LIST_SIZE ";
 // echo($sql);
 
@@ -109,7 +109,12 @@ if (!($result = mysqli_query($conn_11, $sql))) {
 
 $total = "used " . number_format($usedNum) . "대 / " . number_format($totalCnt) . "대";
 
-$i = 0;
+if ($page > 1) {
+  $i = ($page-1) * $LIST_SIZE;
+} else {
+  $i = 0;
+}
+
 while ($row = mysqli_fetch_array($result)) {
   $i++;
   $id                   = $row['id'];
@@ -165,7 +170,7 @@ while ($row = mysqli_fetch_array($result)) {
   }
   
   $pcbaList .= "
-      <td class='d_pcba d_id' data-id='$id'>$id</td>      
+      <td class='d_pcba d_id' data-id='$id'>$i</td>      
       <td class='d_pcba d_pcba_sn' name='sn_asc'>$pcba_sn</td>
       <td class='d_pcba d_tradDate'>$tradDate</td>
       <td class='d_pcba d_tradId'>$tradId</td>

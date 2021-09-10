@@ -79,9 +79,15 @@ if(!($result = mysqli_query($conn_11,$sql))) {
 $total = mysqli_num_rows($result);
 
 $outputList = "";
-$no = 0;
+
+if ($page > 1) {
+  $i = ($page-1) * $LIST_SIZE;
+} else {
+  $i = 0;
+}
+
 while ($row = mysqli_fetch_array($result)) {
-  $no++;
+  $i++;
   $id                   = $row['id'];
   $batt_sn              = $row['battery_sn'];
   $part_id              = $row['part_id'];
@@ -117,7 +123,7 @@ while ($row = mysqli_fetch_array($result)) {
   }
   
   $outputList .= "
-    <td class='d_batt d_id' data-id='$id'>$no</td>      
+    <td class='d_batt d_id' data-id='$id'>$i</td>      
     <td class='d_batt d_batt_sn'>$batt_sn</td>
     <td class='d_batt d_tradDate'>$tradDate</td>
     <td class='d_batt d_tradId'>$tradId</td>

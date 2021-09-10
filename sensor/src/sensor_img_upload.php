@@ -23,7 +23,7 @@ if ($sensor_sn) {
    * 
    */
   $path           = "../data/";
-  $sub1_dir       = substr($sensor_sn,7,6);
+  $sub1_dir       = substr($sensor_sn,-11,6);
   $path1          = $path.$sub1_dir."/";
   $sub2_dir       = substr($sensor_sn,-4);
   $path2          = $path1.$sub2_dir."/";

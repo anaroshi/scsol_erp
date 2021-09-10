@@ -149,10 +149,10 @@ $subTotal = mysqli_num_rows($result);
 if ($status == 0 ) $subTotal = $usedNum;
 
 $outputList ="";
-$no = 0;
+$i = 0;
 while ($row = mysqli_fetch_array($result)) {
 
-  $no++;
+  $i++;
   $id                   = $row['id'];
   $supplierSn           = $row['supplierSn'];
   $usim                 = $row['usim'];
@@ -187,7 +187,7 @@ while ($row = mysqli_fetch_array($result)) {
   }
 
   $outputList .= "
-      <td class ='d_modem d_id' data-id='$id'>$no</td>
+      <td class ='d_modem d_id' data-id='$id'>$i</td>
       <td class ='d_modem d_phone_no' name='$phone_orderby'>$phone_no</td>
       <td class ='d_modem d_supplierSn'>$supplierSn</td>
       <td class ='d_modem d_usim'>$usim </td>      

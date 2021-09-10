@@ -78,7 +78,7 @@ function process_bySensor_sn ($sensor_sn, $conn_11, $readedfile_num) {
 function process_byHz ($sensor_sn, $conn_11, $hz) {
 
     $sn_dir     = substr($sensor_sn,-4);
-    $tradDate   = substr($sensor_sn,7,6);
+    $tradDate   = substr($sensor_sn,-11,6);
     $l          = 0;                            // 읽어드린 파일 중 csv파일 갯수
     $m          = 0;                            // csv파일 중 DB에 올린 파일 갯수
 

@@ -9,7 +9,7 @@
  */
 $listUser = '';
 
-$sql = "SELECT name FROM erp_user ORDER BY name";
+$sql = "SELECT name FROM erp_user WHERE flag != 4 ORDER BY name";
 
 if (!($result = mysqli_query($conn_11, $sql))) {
   echo ("Error description: " . mysqli_error($conn_11) . "query:" . $sql);

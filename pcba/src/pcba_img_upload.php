@@ -23,7 +23,7 @@ if ($pcba_sn) {
    */
 
   $path           = "../data/";
-  $sub1_dir       = substr($pcba_sn, 5, 6);
+  $sub1_dir       = substr($pcba_sn, -11, 6);
   $path1          = $path . $sub1_dir . "/";
   $sub2_dir       = substr($pcba_sn, -4);
   $path2          = $path1 . $sub2_dir . "/";

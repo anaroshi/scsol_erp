@@ -170,7 +170,7 @@ function setCheckBox($id,$value) {
  * 이미지 로드
  * image_1, image_2, image_3
  */
-$path_image = substr($sensor_sn,14,6)."/".substr($sensor_sn,-4);
+$path_image = substr($sensor_sn,-11,6)."/".substr($sensor_sn,-4);
 
 $outputImage_1 = setImageLoad($path_image,$image_1);
 $outputImage_2 = setImageLoad($path_image,$image_2);

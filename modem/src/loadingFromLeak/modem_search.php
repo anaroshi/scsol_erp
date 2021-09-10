@@ -124,7 +124,12 @@ $total = "used ". number_format($usedNum)."대 / ".number_format($num)."대";
 $sid      = "";
 $project  = "";
 
-$i = 0;
+if ($page > 1) {
+  $i = ($page-1) * $LIST_SIZE;
+} else {
+  $i = 0;
+}
+
 while ($row = mysqli_fetch_array($result)) {
   $i++;
   $id                   = $row['id'];
@@ -161,10 +166,9 @@ while ($row = mysqli_fetch_array($result)) {
   } else {
     $modemList .= "<tr class='tr_modem'>";
   }
-
   
   $modemList .= "
-      <td class ='d_modem d_id' data-id='$id'>$id</td>
+      <td class ='d_modem d_id' data-id='$id'>$i</td>
       <td class ='d_modem d_phone_no' name='phone_asc'>$phone_no</td>
       <td class ='d_modem d_supplierSn'>$supplierSn</td>
       <td class ='d_modem d_usim'>$usim </td>

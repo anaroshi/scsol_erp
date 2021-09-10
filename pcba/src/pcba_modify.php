@@ -122,7 +122,7 @@ if($validity=='Y') {
  * 이미지 로드
  * img_radio
  */
-$path_image       = substr($pcba_sn,14,6)."/".substr($pcba_sn,-4);
+$path_image       = substr($pcba_sn,-11,6)."/".substr($pcba_sn,-4);
 
 $outputImg_radio  = setImageLoad($path_image,$img_radio);
 $outputImg_adc    = setImageLoad($path_image,$img_adc);

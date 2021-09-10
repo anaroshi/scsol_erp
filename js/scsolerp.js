@@ -18,6 +18,12 @@ $(document).ready(function () {
     
   });
 
+  $('.item.spt_trad_list').on('click', function () {    
+                                                                      
+    $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/spt/src/spt_part_list.php"></iframe>');
+    
+  });
+
   $('.item.trad_int').on('click', function () {
     
     $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/trad/src/trad_insert.php"></iframe>');
@@ -27,6 +33,30 @@ $(document).ready(function () {
   $('.item.trad_srh').on('click', function () {
                                                                       
     $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/trad/src/trad_search.php"></iframe>');
+    
+  });
+
+  $('.item.trad_pcba').on('click', function () {
+                                                                      
+    $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/trad/src/trad_search.php?ctnm=p"></iframe>');
+    
+  });
+
+  $('.item.trad_cnt').on('click', function () {
+                                                                      
+    $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/trad/src/trad_search.php?ctnm=c"></iframe>');
+    
+  });
+
+  $('.item.trad_mtl').on('click', function () {
+                                                                      
+    $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/trad/src/trad_search.php?ctnm=b"></iframe>');
+    
+  });
+
+  $('.item.trad_etc').on('click', function () {
+                                                                      
+    $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/trad/src/trad_search.php?ctnm=m"></iframe>');
     
   });
 

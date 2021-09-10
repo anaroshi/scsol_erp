@@ -35,12 +35,19 @@
       <div class="content spt" name="content_spt">
         <a class="item menu_list spt_int">등록</a>
         <a class="item menu_list spt_srh borderless">조회</a>
+        <a class="item menu_list spt_trad_list borderless">LIST</a>
       </div>
 
-      <a class="item title trad" name="trad"><i class="fas list alternate outline icon"></i>구매관리</a>
+      <a class="item title trad" name="trad"><i class="fas list alternate outline icon"></i>재고관리</a>
       <div class="content trad" name="content_trad">
-        <a class="item menu_list trad_int">등록</a>
-        <a class="item menu_list trad_srh borderless">조회</a>
+        <a class="item menu_list trad_int">등록</a>        
+        <a class="item menu_list trad_srh borderless">조회</a>        
+        <div class="content subItem subTrad" name="content_subTrad">
+          <a class="item menu_list trad_pcba">PCBA</a>
+          <a class="item menu_list trad_cnt borderless">커넥터</a>
+          <a class="item menu_list trad_mtl borderless">기구</a>
+          <a class="item menu_list trad_etc borderless">주요단품</a>
+        </div>       
       </div>
 
       <a class="item title prdtMgt" name="prdtMgt"><i class="tasks icon"></i>생산관리</a>

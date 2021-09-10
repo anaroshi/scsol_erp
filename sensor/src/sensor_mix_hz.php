@@ -51,14 +51,14 @@ Console_log("총 $total_sn_num 개 센서 중 $completed_sn_num 개 센서의 Da
 
 function process_bysensor_sn ($sensor_sn, $conn_11, $completed_sn_num) {
     $sn_dir             = substr($sensor_sn,-4);
-    $tradDate           = substr($sensor_sn,7,6);
+    $tradDate           = substr($sensor_sn,-11,6);
     $hz                 = "mix";
     $l                  = 0;                            // 읽어드린 파일 중 csv파일 갯수
     $m                  = 0;                            // csv파일 중 DB에 올린 파일 갯수
 
     // $sensor_sn  = "sensor-210205-0001";              // 센서 SN
     // $sn_dir     = substr($sensor_sn,-4);
-    // $tradDate   = substr($sensor_sn,7,6);
+    // $tradDate   = substr($sensor_sn,-11,6);
     // $hz         = "mix";
 
     echo "sensor_sn:$sensor_sn, sn_dir:$sn_dir, tradDate:$tradDate, hz:$hz <br>";
