@@ -119,6 +119,4 @@ $(document).ready(function () {
     $('.container').html('<iframe src="http://www.ithingsware.com:5080/scsol_erp/prdt/src/prdt_search.php"></iframe>');
     
   });
-  
-
 });
